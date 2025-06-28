@@ -45,4 +45,46 @@ const nestedMuppet = {
 
 // 7. Use destructuring to assign all variables using the keys as the variable names
 
-// 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner
+// 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner// 1. Destructure `name` and `breed` from this object:
+const dog = {
+  name: 'Buzz',
+  breed: 'Great Pyrenees',
+  furColor: 'black and white',
+  activityLevel: 'sloth-like',
+  favoriteFood: 'hot dogs'
+};
+
+const { name, breed } = dog;
+
+// 2. Destructure `ham` and `hotDog` from the nested `favoriteFoods.meats` object:
+const doggie = {
+  name: 'Buzz',
+  breed: 'Great Pyrenees',
+  furColor: 'black and white',
+  activityLevel: 'sloth-like',
+  favoriteFoods: {
+    meats: {
+      ham: 'smoked',
+      hotDog: 'Oscar Meyer',
+    },
+    cheeses: {
+      american: 'kraft'
+    }
+  }
+};
+
+const { ham, hotDog } = doggie.favoriteFoods.meats;
+
+// 3. Destructure values from this array:
+const dogs = ['Great Pyrenees', 'Pug', 'Bull Mastiff'];
+const [medium, small, giant] = dogs;
+
+// 4. Destructure by skipping the first element:
+const [, smallDog, giantDog] = dogs;
+
+// 5. Destructure from a string split into an array:
+const dogsName = 'Sir Woody BarksALot';
+const [title, firstName, lastName] = dogsName.split(' ');
+
+// 6. Destructure skipping one value:
+const [prefix, , surname] = dogsName.split(' ');
